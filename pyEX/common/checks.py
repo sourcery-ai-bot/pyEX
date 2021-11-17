@@ -445,9 +445,8 @@ def _checkPeriodLast(per, last):
     if per == "quarter":
         if last < 1 or last > 12:
             raise PyEXception("Last must be in [1, 12] for period 'quarter'")
-    else:
-        if last < 1 or last > 4:
-            raise PyEXception("Last must be in [1, 4] for period 'annual'")
+    elif last < 1 or last > 4:
+        raise PyEXception("Last must be in [1, 4] for period 'annual'")
 
 
 def _reindex(df, col):
